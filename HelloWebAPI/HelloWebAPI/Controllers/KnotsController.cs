@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HelloWebAPI.BLL.Repositories;
+using HelloWebAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,19 +9,34 @@ using System.Web.Http;
 
 namespace HelloWebAPI.Controllers
 {
-    [RoutePrefix("api/Knots")]
+    //[RoutePrefix("")]
     public class KnotsController : ApiController
     {
-        [Route("")]
-        public string GetKnots()
+        [Route("api/Knots")]
+        public List<Knot> GetKnots()
         {
-            return string.Format("Here are all the knots.");
+            return KnotsRepo.GetAllKnots();
         }
 
-        [Route("{id:int}")]
-        public string GetKnotsById(int id)
+        [Route("api/Knots")]
+        public List<Knot> GetKnots(string phrase)//ByPhrase
         {
-            return string.Format("Hello {0}", id);
+            if (string.IsNullOrEmpty(phrase))
+            {
+                return KnotsRepo.GetAllKnots();
+            }
+            else
+            {
+                return KnotsRepo.GetKnotsByPhrase(phrase);
+            }
         }
+
+        [Route("api/Knots/{id:int}")]
+        public Knot GetKnotsById(int id)
+        {
+            return KnotsRepo.GetKnotById(id);
+        }
+
+        
     }
 }

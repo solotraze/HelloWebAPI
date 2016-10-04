@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web;
+using System.IO;
+using System.Net.Http;
 
 namespace HelloWebAPI.BLL.Formatters
 {
@@ -12,7 +14,7 @@ namespace HelloWebAPI.BLL.Formatters
     {
         public KnotFormatter()
         {
-            SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/knot"));
+            SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/knot"));
         }
 
         public override bool CanReadType(Type type)
@@ -30,6 +32,28 @@ namespace HelloWebAPI.BLL.Formatters
             {
                 return false;
             }
+        }
+
+        public override void WriteToStream(Type type, object value, Stream writeStream, HttpContent content)
+        {
+            using (var writer = new StreamWriter(writeStream))
+            {
+                var knotObj = value as Knot;
+                if (knotObj != null)
+                {
+                    WriteSingleItem(knotObj, writer);
+                }
+                else
+                {
+                    throw new InvalidOperationException("Cannot serilize type.");
+                }
+            }
+        }
+
+        private void WriteSingleItem(Knot obj, StreamWriter writer)
+        {
+            writer.WriteLine("{0} ({1})\r\n{2}\r\n---------", FormatHelper.Escape(obj.Title),
+                FormatHelper.Escape(obj.KnotId), FormatHelper.Escape(obj.Content));
         }
     }
 }
