@@ -34,7 +34,15 @@ namespace HelloWebAPI.Controllers
         [Route("api/Knots/{id:int}")]
         public Knot GetKnotsById(int id)
         {
-            return KnotsRepo.GetKnotById(id);
+            var obj = KnotsRepo.GetKnotById(id);
+            if (obj != null)
+            {
+                return obj;
+            }
+            else
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
         }
 
         
