@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace HelloWebAPI.Controllers
 {
+    [System.Web.Mvc.RequireHttps]
     //[RoutePrefix("")]
     public class KnotsController : ApiController
     {

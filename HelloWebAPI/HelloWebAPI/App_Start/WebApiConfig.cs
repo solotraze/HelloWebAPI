@@ -6,6 +6,7 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using HelloWebAPI.BLL.Formatters;
+using HelloWebAPI.BLL.Attributes;
 
 namespace HelloWebAPI
 {
@@ -17,6 +18,9 @@ namespace HelloWebAPI
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+
+            /** Custom **/
+            //config.Filters.Add(new RequireHttpsAttribute()); // Deny insecure HTTP by our custom class
             config.Formatters.Add(new KnotFormatter());
 
             // Web API routes
