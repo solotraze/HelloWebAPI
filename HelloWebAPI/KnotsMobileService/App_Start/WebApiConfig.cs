@@ -31,15 +31,15 @@ namespace KnotsMobileService
     {
         protected override void Seed(MobileServiceContext context)
         {
-            List<TodoItem> todoItems = new List<TodoItem>
+            List<Knot> knots = new List<Knot>
             {
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
+                new Knot { Id = Guid.NewGuid().ToString(), Title = "First item", Content = "Detailed content 1."},
+                new Knot { Id = Guid.NewGuid().ToString(), Title = "Second item", Content = "Detailed content 2." },
             };
 
-            foreach (TodoItem todoItem in todoItems)
+            foreach (var item in knots)
             {
-                context.Set<TodoItem>().Add(todoItem);
+                context.Set<Knot>().Add(item);
             }
 
             base.Seed(context);
