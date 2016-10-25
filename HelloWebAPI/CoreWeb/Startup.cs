@@ -28,7 +28,10 @@ namespace CoreWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<KnotsInterfaces.BLL.IKnotsBAL, KnotsBLL.KnotsBAL>();
-            services.AddTransient<KnotsInterfaces.Repositories.IKnotsRepo, KnotsRepositories.KnotsRepo>();
+            services.AddSingleton<KnotsInterfaces.Repositories.IKnotsRepo, KnotsRepositories.KnotsRepo>();
+
+            // Inject an implementation of ISwaggerProvider with defaulted settings applied
+            services.AddSwaggerGen();
 
             // Add framework services.
             services.AddMvc();
@@ -42,6 +45,9 @@ namespace CoreWeb
 
             app.UseStaticFiles();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUi();
         }
     }
 }

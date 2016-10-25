@@ -19,7 +19,8 @@
     "KnotsInterfaces": "1.0.0-*",
     "KnotsBLL": "1.0.0-*",
     "KnotsModels": "1.0.0-*",
-    "KnotsRepositories": "1.0.0-*"
+    "KnotsRepositories": "1.0.0-*",
+    "Swashbuckle": "6.0.0-beta902"
   },
 
   "tools": {
