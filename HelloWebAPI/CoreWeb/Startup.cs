@@ -27,6 +27,9 @@ namespace CoreWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<KnotsInterfaces.BLL.IKnotsBAL, KnotsBLL.KnotsBAL>();
+            services.AddTransient<KnotsInterfaces.Repositories.IKnotsRepo, KnotsRepositories.KnotsRepo>();
+
             // Add framework services.
             services.AddMvc();
         }
