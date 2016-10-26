@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWebAPI.Tests", "HelloW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinWebAPI", "OwinWebAPI\OwinWebAPI.csproj", "{1A937664-AF10-4182-9B8C-FB544B870D89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnotsMobileService", "KnotsMobileService\KnotsMobileService.csproj", "{20D46637-7168-49D5-B2A2-61376BE70FB5}"
-EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreWeb", "CoreWeb\CoreWeb.xproj", "{12920F8E-2F1D-4D74-B6FE-919A770F4B6B}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "KnotsBLL", "KnotsBLL\KnotsBLL.xproj", "{608EB5C3-C83B-4DAD-A871-3AA479053A5C}"
@@ -20,6 +18,8 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "KnotsRepositories", "KnotsRepositories\KnotsRepositories.xproj", "{4F2DDD07-42C0-412D-BC55-83D0CA8135B6}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "KnotsModels", "KnotsModels\KnotsModels.xproj", "{AB69AF59-2A4B-468C-A9B1-36EAD58FF066}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CoreWeb.Tests", "CoreWeb.Tests\CoreWeb.Tests.xproj", "{ED943AE1-FDBB-4DC4-B19A-65C7F8F82078}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,6 @@ Global
 		{1A937664-AF10-4182-9B8C-FB544B870D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A937664-AF10-4182-9B8C-FB544B870D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A937664-AF10-4182-9B8C-FB544B870D89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20D46637-7168-49D5-B2A2-61376BE70FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20D46637-7168-49D5-B2A2-61376BE70FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20D46637-7168-49D5-B2A2-61376BE70FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20D46637-7168-49D5-B2A2-61376BE70FB5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{12920F8E-2F1D-4D74-B6FE-919A770F4B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{12920F8E-2F1D-4D74-B6FE-919A770F4B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12920F8E-2F1D-4D74-B6FE-919A770F4B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{AB69AF59-2A4B-468C-A9B1-36EAD58FF066}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB69AF59-2A4B-468C-A9B1-36EAD58FF066}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB69AF59-2A4B-468C-A9B1-36EAD58FF066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED943AE1-FDBB-4DC4-B19A-65C7F8F82078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED943AE1-FDBB-4DC4-B19A-65C7F8F82078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED943AE1-FDBB-4DC4-B19A-65C7F8F82078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED943AE1-FDBB-4DC4-B19A-65C7F8F82078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
