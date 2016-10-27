@@ -9,5 +9,6 @@ namespace KnotsInterfaces.BLL
     public interface IKnotsBAL
     {
         IEnumerable<Knot> GetAllKnots();
+        Task<Knot> FindKnot(int id);
     }
 }

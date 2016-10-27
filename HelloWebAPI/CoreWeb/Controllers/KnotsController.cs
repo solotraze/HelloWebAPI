@@ -25,15 +25,23 @@ namespace CoreWeb.Controllers
         {
             return Ok(_knotsBal.GetAllKnots());
         }
-
-        /*
+        
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            var knot = await _knotsBal.FindKnot(id);
+            if (knot != null)
+            {
+                return Ok(knot);
+            }
+            else
+            {
+                return new NotFoundResult();
+            }
         }
 
+        /*
         // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)

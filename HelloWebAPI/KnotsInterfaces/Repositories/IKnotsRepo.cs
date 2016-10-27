@@ -9,5 +9,6 @@ namespace KnotsInterfaces.Repositories
     public interface IKnotsRepo
     {
         IEnumerable<Knot> GetAllKnots();
+        Task<Knot> Find(int id);
     }
 }

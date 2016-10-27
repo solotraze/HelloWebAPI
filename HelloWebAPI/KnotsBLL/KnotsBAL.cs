@@ -20,5 +20,11 @@ namespace KnotsBLL
         {
             return _repo.GetAllKnots();
         }
+
+        public async Task<Knot> FindKnot(int id)
+        {
+            return await _repo.Find(id);
+        }
+        
     }
 }
