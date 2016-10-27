@@ -21,9 +21,9 @@ namespace CoreWeb.Controllers
 
         // GET: api/values
         [HttpGet]
-        public IEnumerable<Knot> Get()
+        public IActionResult Get()
         {
-            return _knotsBal.GetAllKnots();
+            return Ok(_knotsBal.GetAllKnots());
         }
 
         /*

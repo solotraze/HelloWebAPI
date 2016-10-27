@@ -8,6 +8,7 @@ using CoreWeb.Controllers;
 using KnotsInterfaces.BLL;
 using KnotsInterfaces.Repositories;
 using KnotsModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CoreWeb.Tests.Controllers
 {
@@ -21,15 +22,40 @@ namespace CoreWeb.Tests.Controllers
         [Fact]
         public void TestGet()
         {
-
-            //var knotsRepoMock = Substitute.For<IKnotsRepo>();
             var knotsBalMock = Substitute.For<IKnotsBAL>();
             knotsBalMock.GetAllKnots().Returns(new List<Knot> {
                                                 new Knot { Title="Mock1", Content="Mock content1" } });
             var controller = new KnotsController(knotsBalMock);
             var result = controller.Get();
-            Assert.NotNull(result);
-            Assert.Equal(result.Count(), 1);
+
+            Assert.IsNotType<BadRequestResult>(result);
+
+            Assert.IsType<OkObjectResult>(result);
+
+            var contentResult = result as OkObjectResult;
+            Assert.IsAssignableFrom<IEnumerable<Knot>>(contentResult.Value);
+
+            var knots = contentResult.Value as IEnumerable<Knot>;
+            Assert.NotEmpty(knots);
+            Assert.Equal(knots.Count(), 1);
+        }
+
+        [Fact]
+        public void TestPost()
+        {
+            Assert.True(false, "Not implemented");
+        }
+
+        [Fact]
+        public void TestPut()
+        {
+            Assert.True(false, "Not implemented");
+        }
+
+        [Fact]
+        public void TestDelete()
+        {
+            Assert.True(false, "Not implemented");
         }
     }
 }
