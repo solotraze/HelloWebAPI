@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Knots.Models
 {
-    public class Class1
+    public class Knot
     {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
     }
 }

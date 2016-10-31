@@ -40,12 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KnotsRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Knots.Common\Knots.Common.csproj">
       <Project>{c3119d06-aa2a-488a-88c0-679499fff199}</Project>
       <Name>Knots.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Knots.Models\Knots.Models.csproj">
+      <Project>{563ce412-ce32-42b2-9e75-0a144df59bad}</Project>
+      <Name>Knots.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
