@@ -185,6 +185,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610311727084_InitialSchema.cs" />
+    <Compile Include="Migrations\201610311727084_InitialSchema.Designer.cs">
+      <DependentUpon>201610311727084_InitialSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -277,6 +282,11 @@
       <Project>{8fa70802-7195-4bf8-b76e-2806c30db6e6}</Project>
       <Name>Knots.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610311727084_InitialSchema.resx">
+      <DependentUpon>201610311727084_InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
