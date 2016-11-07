@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Models", "Knots.Model
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Repos", "Knots.Repos\Knots.Repos.csproj", "{7F3D140B-6C7B-4BDF-8A0F-015AFB0EA63E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Translation", "Translation", "{08C071DC-FC48-4426-A7BB-797B18AC8CAB}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TranslationsWeb", "TranslationsWeb\TranslationsWeb.xproj", "{89F77E8E-E709-43D1-BC81-1BE92CF5FD56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +111,10 @@ Global
 		{7F3D140B-6C7B-4BDF-8A0F-015AFB0EA63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F3D140B-6C7B-4BDF-8A0F-015AFB0EA63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F3D140B-6C7B-4BDF-8A0F-015AFB0EA63E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F77E8E-E709-43D1-BC81-1BE92CF5FD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F77E8E-E709-43D1-BC81-1BE92CF5FD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F77E8E-E709-43D1-BC81-1BE92CF5FD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F77E8E-E709-43D1-BC81-1BE92CF5FD56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,5 +126,6 @@ Global
 		{C3119D06-AA2A-488A-88C0-679499FFF199} = {7823525E-DD57-4768-B660-98F0DA9FE8D9}
 		{563CE412-CE32-42B2-9E75-0A144DF59BAD} = {7823525E-DD57-4768-B660-98F0DA9FE8D9}
 		{7F3D140B-6C7B-4BDF-8A0F-015AFB0EA63E} = {7823525E-DD57-4768-B660-98F0DA9FE8D9}
+		{89F77E8E-E709-43D1-BC81-1BE92CF5FD56} = {08C071DC-FC48-4426-A7BB-797B18AC8CAB}
 	EndGlobalSection
 EndGlobal

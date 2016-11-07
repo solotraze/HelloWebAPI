@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer _vwLocalizer
+@{
+    var guests = new List<string> { "Tom", "Dick", "Harry" };
+}
+
+<h3>@_vwLocalizer["Hello"] @guests[0]</h3>
+Welcome to the jungle.
